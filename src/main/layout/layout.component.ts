@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MediaMatcher, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'ns-layout',
@@ -8,13 +9,17 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mediaMatcher: MediaMatcher) { }
+
+  toXSmall: MediaQueryList;
 
   ngOnInit() {
+    this.toXSmall = this.mediaMatcher.matchMedia(Breakpoints.XSmall);
+    this.toXSmall.addListener(this.toXSmallListener)
   }
 
-  ngAfterViewInit() {
-
+  toXSmallListener(event: MediaQueryListEvent) {
+    console.log(event.matches ? 'match' : 'no match')
   }
 
 }

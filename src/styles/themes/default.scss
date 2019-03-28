@@ -15,3 +15,8 @@ $padding-content: 15px;
 $border-color: #dadada;
 // 输入框
 $input-focus-border-color: $a-color;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}

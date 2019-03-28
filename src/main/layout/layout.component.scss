@@ -1,2 +1,75 @@
 @import "index";
 
+ns-layout {
+  padding-top: 3em;
+  display: block;
+  .main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  > ns-header {
+    display: flex;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.96);
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15), inset 0 -1px rgba(255, 255, 255, 0.8);
+    left: 0;
+    top: 0;
+    height: 3em;
+    .main {
+      @include flex-center();
+      justify-content: space-between;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      > ul {
+        @include flex-center();
+        > li {
+          > a {
+            padding: 0.5em 0.7em;
+            margin: 0 0.125em;
+            box-shadow: none;
+            transition: all 1s;
+            background: #fff;
+            border-radius: 0.125em;
+            &:hover {
+              box-shadow: inset 0 2px #fff, inset 0 -3px $a-hover-color;
+              z-index: 2;
+              background-color: rgba(0, 0, 0, 0.1);
+              color: $normal-color;
+            }
+          }
+          &.logo {
+            margin-right: 0.875em;
+            @include flex-center();
+            img {
+              width: 2.5em;
+              height: 2.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > ns-footer {
+    width: 100%;
+    display: inline-block;
+    margin-top: 1.5em;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0) 100%);
+    .main {
+      @include flex-center();
+      justify-content: center;
+      > p {
+        text-align: center;
+        font-size: 0.625em;
+        line-height: 1.75em;
+        margin: 2em 0;
+        color: #777;
+      }
+    }
+  }
+}
