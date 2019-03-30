@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ConfigService } from 'src/services/config.service';
 
 @Component({
   selector: 'ns-root',
@@ -8,4 +9,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-nest-site';
+  constructor(private config: ConfigService) {
+    this.config.init();
+  }
 }

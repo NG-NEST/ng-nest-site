@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 
-// 声明模块中拥有的视图类
 const components = [
   LayoutComponent,
   HeaderComponent,

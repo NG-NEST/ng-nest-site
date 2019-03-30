@@ -2,5 +2,29 @@
 
 ns-demo {
   > .main {
+    @include flex-center();
+    justify-content: center;
+    > .card {
+      margin-top: 1.5em;
+      margin-right: 1.5em;
+      padding: 0.75em;
+      border-radius: 0.175em;
+      background-color: rgba(255, 255, 255, 0.8);
+      max-width: 64em;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        transition: box-shadow .3s;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+      }
+      > a {
+        width: 100%;
+        display: block;
+        > img {
+          width: 100%;
+        }
+      }
+    }
   }
 }

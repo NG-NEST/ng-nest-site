@@ -78,21 +78,19 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "outputPath": "dist/ng-nest-site-en/",
+              "outputPath": "dist/ng-nest-site/en/",
               "i18nFile": "src/locale/messages.en.xlf",
               "baseHref": "/en/",
               "i18nFormat": "xlf",
-              "i18nLocale": "en",
-              "i18nMissingTranslation": "error"
+              "i18nLocale": "en"
             },
             "en": {
               "aot": true,
-              "outputPath": "dist/ng-nest-site-en/",
+              "outputPath": "dist/ng-nest-site/en/",
               "baseHref": "/en/",
               "i18nFile": "src/locale/messages.en.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "en",
-              "i18nMissingTranslation": "error"
+              "i18nLocale": "en"
             },
             "production-zh": {
               "fileReplacements": [
@@ -110,21 +108,19 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "outputPath": "dist/ng-nest-site-zh/",
+              "outputPath": "dist/ng-nest-site/zh/",
               "baseHref": "/zh/",
               "i18nFile": "src/locale/messages.zh.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "zh",
-              "i18nMissingTranslation": "error"
+              "i18nLocale": "zh"
             },
             "zh": {
               "aot": true,
-              "outputPath": "dist/ng-nest-site-zh/",
+              "outputPath": "dist/ng-nest-site/zh/",
               "baseHref": "/zh/",
               "i18nFile": "src/locale/messages.zh.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "zh",
-              "i18nMissingTranslation": "error"
+              "i18nLocale": "zh"
             }
           }
         },

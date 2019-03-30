@@ -2,12 +2,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { SimpleReuseStrategy } from '../simple-reuse-srategy';
 
-/**
- * 404异常页面
- *
- * @export
- * @class Exception404Component
- */
 @Component({
   selector: 'exception-404',
   templateUrl: './404.component.html',

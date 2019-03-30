@@ -6,6 +6,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PortalModule } from '@angular/cdk/portal';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DevelopingComponent } from './developing/developing.component';
+import { RouterModule } from '@angular/router';
 
 const components = [
   DevelopingComponent
@@ -17,6 +18,7 @@ const entryComponents = [
 const modules = [
   CommonModule,
   FormsModule,
+  RouterModule,
   ReactiveFormsModule,
   OverlayModule,
   PortalModule,

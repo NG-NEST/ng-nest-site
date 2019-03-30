@@ -1,10 +1,15 @@
 <section class="main">
-  <ul>
+  <ul class="left">
     <li class="logo"><img src="assets/img/logo.png"></li>
     <li><a routerLink="./home" routerLinkActive="active" i18n="@@home">Home</a></li>
     <li><a routerLink="./demo" routerLinkActive="active" i18n="@@demo">Demo</a></li>
     <li><a routerLink="./docs" routerLinkActive="active" i18n="@@docs">Docs</a></li>
     <li><a routerLink="./news" routerLinkActive="active" i18n="@@news">News</a></li>
   </ul>
-
+  <ul class="right">
+    <li class="lang">
+      <a *ngIf="lang!=='en'" (click)="push('en')">English</a>
+      <a *ngIf="lang!=='zh'" (click)="push('zh')">中文</a>
+    </li>
+  </ul>
 </section>
