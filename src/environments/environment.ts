@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  // 框架页
   layout: 'index',
-  // 默认的首页
   defaultPage: 'home'
 };
 

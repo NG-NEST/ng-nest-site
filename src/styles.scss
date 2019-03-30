@@ -19,13 +19,10 @@
   font-style: normal;
 }
 
-@font-face {font-family: "iconfont";
-  src: url('assets/fonts/iconfont.eot?t=1553866273552'); /* IE9 */
-  src: url('assets/fonts/iconfont.eot?t=1553866273552#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASoAAsAAAAACSgAAARZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqGBIUAATYCJAMMCwgABCAFhG0HQhvSB8geklS/BBRQDgcRkKCAOsrNZrOUo6lYCBV3Pdefqfzg4flj77nvd9H/VMvABh5V0GwkQ2viBt/V2jCt5E2QvLklTXrzv2+6MEOoZEKhVWIS+5/LaZOiA2v9KMvl7ppzYIBxQAHt/bwXWYEEqin3AM9wYQLvAwSQRrShY9fZ0hORJSxDAHrIEJkn4tLLxiBIUZUP2ZvlR/2QU0wdxGUA6NM/j/7AMFiAkMuAsNb/vs97Wp/oxy2u59Y7VQkgKM8KALdDAAPaABig81B7OL8Z14aVP/JAfC5TVkhlhbhcdP5Xmhf/8AAhQHkQ5PxEVU8QvA2ZCwh+3ArHWjBzi5kAD6gO0CpTqedjKcPcRX1M4wvF8TGM229ioWQwmVV1oVYk2PXD1LjECHv2DKdhk14NGQaUQFOmEKjvZXiO0vSqqpRFdiovK1Mihjr1YeZQyxRJYam0KiMKLuMcHa4fmeLQGVtS9+6ETB6nhrepKclp9eXDNOaMIsThTBk+kqY683tP3rEYLmnsiorJIbN798LYEhLijIVN3WtNsdXUjpht33Y/cr3jdvAJrTP3lBbk7z0MpQF1xcVbIadkzfIyZo6urtJobE2Ij3E4Y2OKZAq9iJYcrUpGI9aR8aMH0sa9DivMDdupxl0QUfWXnqITjBqfGDcmYHdI3+TFm7SdJIRzzDffEaK2v7ZrRAuvsxBGvFYqle2SY8aVKlZMPkywaWL11aufxQUeNhCBgsdb8n6PyIfd49BHH/7/bcy+ZCYcDBo3rvIOSrPEIgQUHR1SmIg0MR47NEiKmF7vlZG0UF3olroxIdxhbHwu1v6l4d6ULS84I8oWwaSmcuKGw6Iw9tfHhL/DdV4ihd5nbIh4OVNMFMqsKkyG0cosHpG8uF158NV99No43e6jv0Po/LYvXZOccRWKNPEM/+/s5s1cia25FwR1q4CCJWLPyeub2Um5mPK+6F+hGFG/t15YrACsNoPnXfGD5Mvbob1mefYFERa/MEs9Ts2sb+ZkioCWwxG45AEA7lk8j+31ZHtWG+efON/h83TjcJyQ9R8WHwMAwP0POwUUpiv0AEsiteA0acsqA3D/Z7XvIsGAs28ZxPL/Tux/lVsJELu7gAuCW9TT/Gr2rkgiRT0bCAVDwIrGRIao7iSPii0EpqI9IC1yO8yno5BfZHkBaGoBCE17IKl7hoymK8Qs9Qnk9H2BvGZgKDsJsTMrppFBOhUiI+QhsQIykkxDkEwUM0rnKB415jhFOn2NjiuHwEBX35saooFOGRuKSsVScbEAqYWmDq7wGGqaCfmFpoIc5dKLyaro6aWGvSiXlKd7Yo44EEMQDyQ6Axk4JoOgDiYx3/vnkOhIwzgxPT+8a8jhkkcHBnTppyAO5Uaqnm2ZXOREVFKMCLwolcOkA65oRZoYN4H88FkKxCE56Tmilgo96peaVp6rX6kv3yEASEItDgJhxIDqqNuzCbmTI486cnJTXPJ4AAAAAA==') format('woff2'),
-  url('assets/fonts/iconfont.woff?t=1553866273552') format('woff'),
-  url('assets/fonts/iconfont.ttf?t=1553866273552') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-  url('assets/fonts/iconfont.svg?t=1553866273552#iconfont') format('svg'); /* iOS 4.1- */
+@font-face {
+  font-family: "iconfont";
+  src: url("assets/fonts/iconfont.eot?#") format("woff2"), url("assets/fonts/iconfont.woff") format("woff"),
+    url("assets/fonts/iconfont.ttf") format("truetype"), url("assets/fonts/iconfont.svg#iconfont") format("svg");
 }
 
 .icon {
@@ -42,6 +39,18 @@
 
 .icon-nest:before {
   content: "\e601";
+}
+
+.icon-check:before {
+  content: "\e600";
+}
+
+.icon-checkout:before {
+  content: "\e62c";
+}
+
+.icon-wait:before {
+  content: "\e615";
 }
 
 *,
@@ -76,8 +85,12 @@ h5 {
   cursor: default;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'titillium';
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "titillium";
 }
 
 body,
@@ -116,7 +129,7 @@ input {
     WenQuanYi Micro Hei, sans-serif;
 }
 
-section {
+[class^="col-"] {
   position: relative;
   float: left;
   display: block;

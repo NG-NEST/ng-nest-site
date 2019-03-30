@@ -5,16 +5,15 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PortalModule } from '@angular/cdk/portal';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DevelopingComponent } from './developing/developing.component';
 
-// 声明模块中拥有的视图类
 const components = [
+  DevelopingComponent
 ]
 
-// 能够动态创建的视图类
 const entryComponents = [
 ]
 
-// 模块
 const modules = [
   CommonModule,
   FormsModule,
@@ -25,7 +24,6 @@ const modules = [
   LayoutModule
 ]
 
-// 服务
 const providers = [
 ]
 

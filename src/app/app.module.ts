@@ -20,7 +20,6 @@ import { MainRoutesModule } from 'src/main/routes.module';
     ShareModule,
     MainRoutesModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

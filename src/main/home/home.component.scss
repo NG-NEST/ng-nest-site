@@ -56,6 +56,9 @@ ns-home {
         a {
           padding: 1.5em;
           display: block;
+          &.we {
+            cursor: default;
+          }
           &:hover {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0) 100%);
           }
@@ -71,19 +74,29 @@ ns-home {
               font-size: 1.25em;
               color: $normal-color;
               margin-right: 0.125em;
-              // &.icon-angular {
-              //   color: #dd0031;
-              // }
-              // &.icon-nest {
-              //   color: #e0234e;
-              // }
             }
           }
           > ul {
-            margin: .5rem 0;
+            margin: 0.5rem 0;
             > li {
               padding: 0.5em 0;
               color: $normal-color;
+              display: flex;
+              > i {
+                margin-right: 0.325em;
+                font-size: 1.2em;
+                line-height: 1.2em;
+                &.icon-checkout {
+                  color: $green-color;
+                }
+                &.icon-wait {
+                  color: #777;
+                }
+              }
+              > p {
+                flex: 1;
+                line-height: 1.5;
+              }
             }
           }
         }
