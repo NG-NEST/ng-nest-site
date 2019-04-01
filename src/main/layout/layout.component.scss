@@ -53,12 +53,21 @@ ns-layout {
           }
         }
         &.right {
-          > li.lang {
+          > li {
             > a {
               padding: 0.3em 0.7em;
               font-size: 0.875em;
-              border: .0725em solid $assist-color;
-              border-radius: 0.25em;
+            }
+            &.github {
+              > a {
+                font-size: 1.8em;
+              }
+            }
+            &.lang {
+              > a {
+                border: 0.0725em solid $assist-color;
+                border-radius: 0.25em;
+              }
             }
           }
         }
