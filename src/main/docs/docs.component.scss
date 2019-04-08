@@ -2,5 +2,27 @@
 
 ns-docs {
   > .main {
+    > .row {
+      margin: 2rem auto;
+      max-width: 57.5rem;
+      display: flex;
+      > img {
+        width: 20rem;
+        height: 20rem;
+      }
+      > .content {
+        flex: 1;
+        padding: 2rem;
+        > h1 {
+          font-size: 1.25rem;
+          margin: 0 0 1rem 0;
+        }
+      }
+    }
+    > hr {
+      border: none;
+      background: #dbdbdb;
+      height: 1px;
+    }
   }
 }

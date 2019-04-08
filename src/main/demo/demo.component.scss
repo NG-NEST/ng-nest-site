@@ -5,12 +5,12 @@ ns-demo {
     @include flex-center();
     justify-content: center;
     > .card {
-      margin-top: 1.5em;
-      margin-right: 1.5em;
-      padding: 0.75em;
-      border-radius: 0.175em;
+      margin-top: 1.5rem;
+      margin-right: 1.5rem;
+      padding: 0.75rem;
+      border-radius: 0.175rem;
       background-color: rgba(255, 255, 255, 0.8);
-      max-width: 64em;
+      max-width: 64rem;
       &:last-child {
         margin-right: 0;
       }
