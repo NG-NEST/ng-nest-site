@@ -56,6 +56,34 @@
   content: "\e64a";
 }
 
+.icon-arrow-right:before {
+  content: "\f165";
+}
+
+.icon-arrow-down:before {
+  content: "\e602";
+}
+
+.icon-workflow:before {
+  content: "\e66a";
+}
+
+.icon-ui:before {
+  content: "\e652";
+}
+
+.icon-code:before {
+  content: "\e61c";
+}
+
+.icon-module:before {
+  content: "\e757";
+}
+
+.icon-form:before {
+  content: "\e603";
+}
+
 *,
 :after,
 :before {
@@ -72,10 +100,10 @@ html {
 
 body {
   font-size: 1rem;
-  color: #444;
+  color: $primary-text-color;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: #f1f1f1;
+  background-color: #fafafa;
 }
 
 span,
@@ -110,13 +138,13 @@ ul {
 }
 
 a {
-  color: $a-color;
+  color: $primary-color;
   text-decoration: none;
   transition: all 0.4s;
   cursor: pointer;
 
   &:hover {
-    color: $a-hover-color;
+    color: $primary-color;
   }
 }
 
@@ -130,63 +158,4 @@ body,
 input {
   font-family: "ubuntu", -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
     WenQuanYi Micro Hei, sans-serif;
-}
-
-[class^="col-"] {
-  position: relative;
-  float: left;
-  display: block;
-  overflow: auto;
-
-  &.col-12 {
-    width: 100%;
-  }
-
-  &.col-11 {
-    width: 91.66666667%;
-  }
-
-  &.col-10 {
-    width: 83.33333333%;
-  }
-
-  &.col-9 {
-    width: 75%;
-  }
-
-  &.col-8 {
-    width: 66.66666667%;
-  }
-
-  &.col-7 {
-    width: 58.33333333%;
-  }
-
-  &.col-6 {
-    width: 50%;
-  }
-
-  &.col-5 {
-    width: 41.66666667%;
-  }
-
-  &.col-4 {
-    width: 33.33333333%;
-  }
-
-  &.col-3 {
-    width: 25%;
-  }
-
-  &.col-2 {
-    width: 16.66666667%;
-  }
-
-  &.col-1 {
-    width: 8.33333333%;
-  }
-
-  &.col-0 {
-    width: inherit;
-  }
 }

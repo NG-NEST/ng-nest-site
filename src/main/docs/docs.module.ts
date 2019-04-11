@@ -10,7 +10,11 @@ import { ShareModule } from 'src/share/share.module';
     DocsRoutesModule,
     ShareModule
   ],
-  declarations: [DocsComponent],
-  exports: [DocsComponent]
+  declarations: [
+    DocsComponent
+  ],
+  exports: [
+    DocsComponent
+  ]
 })
 export class DocsModule { }

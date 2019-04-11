@@ -1,8 +1,9 @@
 @import "index";
 
 ns-demo {
-  > .main {
-    @include flex-center();
+  > section {
+    display: flex;
+    align-items: center;
     justify-content: center;
     > .card {
       margin-top: 1.5rem;
@@ -15,7 +16,7 @@ ns-demo {
         margin-right: 0;
       }
       &:hover {
-        transition: box-shadow .3s;
+        transition: box-shadow 0.3s;
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
       }
       > a {

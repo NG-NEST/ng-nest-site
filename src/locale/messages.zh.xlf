@@ -20,7 +20,7 @@
       </trans-unit>
       <trans-unit id="home" datatype="html">
         <source>Home</source>
-        <target>首页</target>
+        <target>首 页</target>
         <context-group purpose="location">
           <context context-type="sourcefile">share/developing/developing.component.html</context>
           <context context-type="linenumber">5</context>
@@ -192,7 +192,7 @@
       </trans-unit>
       <trans-unit id="demo" datatype="html">
         <source>Demo</source>
-        <target>示例</target>
+        <target>示 例</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/layout/header/header.component.html</context>
           <context context-type="linenumber">5</context>
@@ -200,7 +200,7 @@
       </trans-unit>
       <trans-unit id="docs" datatype="html">
         <source>Docs</source>
-        <target>文档</target>
+        <target>文 档</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/layout/header/header.component.html</context>
           <context context-type="linenumber">6</context>
@@ -208,7 +208,7 @@
       </trans-unit>
       <trans-unit id="news" datatype="html">
         <source>News</source>
-        <target>最新</target>
+        <target>最 新</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/layout/header/header.component.html</context>
           <context context-type="linenumber">7</context>

@@ -1,74 +1,125 @@
 @import "index";
 
-ns-layout {
-  padding-top: 3.75rem;
-  display: block;
-  .main {
-    width: 100%;
-    padding: 0 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
+// 悬停效果
+@mixin hover {
+  background-color: rgba($primary-text-color, 0.1);
+  border-radius: 0.25rem;
+  color: $primary-color;
+}
 
+// 选中效果
+@mixin activated {
+  color: $primary-color;
+}
+
+ns-layout {
   > ns-header {
-    display: flex;
-    position: fixed;
-    background-color: #fefefe;
+    background-color: white;
+    box-shadow: $box-shadow;
+    height: $header-height;
     width: 100%;
-    z-index: 999;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15), inset 0 -1px rgba(255, 255, 255, 0.8);
-    left: 0;
+    position: fixed;
     top: 0;
-    height: 3.75rem;
-    .main {
-      @include flex-center();
-      justify-content: space-between;
-      > ul {
-        @include flex-center();
-        &.left {
-          > li {
-            > a {
-              padding: 0.5rem 0.875rem;
-              margin: 0 0.125rem;
-              box-shadow: none;
-              transition: all 1s;
-              background: #fff;
-              border-radius: 0.125rem;
-              &:hover,
-              &.active {
-                box-shadow: inset 0 2px #fff, inset 0 -3px $a-hover-color;
-                z-index: 2;
-                background-color: rgba(0, 0, 0, 0.1);
-                color: $normal-color;
-              }
-            }
-            &.logo {
-              margin-right: 0.875rem;
-              @include flex-center();
-              img {
-                width: 2.5rem;
-                height: 2.5rem;
-              }
-            }
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    opacity: 0.95;
+    > ul {
+      display: flex;
+      align-items: center;
+      > li {
+        > a {
+          padding: 0.5rem 1rem;
+          margin: 0 0.125rem;
+          color: $primary-text-color;
+          &:hover,
+          &.active {
+            @include hover;
           }
         }
-        &.right {
-          > li {
+        &.logo {
+          display: flex;
+          align-items: center;
+          margin-right: 0.5rem;
+          > img {
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  > ns-sider {
+    background-color: white;
+    height: calc(100% - #{$header-height});
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    z-index: 9;
+    box-shadow: $box-shadow;
+    transition: width $transition-duration, padding $transition-duration;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    li {
+      a {
+        padding: 0;
+        transition: background-color $transition-duration;
+        display: flex;
+        align-items: center;
+        height: 2.25rem;
+        font-size: 0.875rem;
+        color: $primary-text-color;
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0 0.25rem;
+          transition: visibility $transition-duration, opacity $transition-duration;
+          flex: 1;
+          visibility: hidden;
+          opacity: 0;
+          cursor: pointer;
+        }
+        i {
+          font-size: 1rem;
+          visibility: hidden;
+          transition: visibility $transition-duration, opacity $transition-duration;
+          &.menu {
+            font-size: 1.25rem;
+          }
+          &.arrow {
+            opacity: 0;
+            color: $primary-text-color;
+          }
+        }
+        &:hover {
+          @include hover;
+        }
+        &.active {
+          @include activated;
+          &:hover {
+            @include activated;
+          }
+        }
+      }
+      > ul {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+      }
+    }
+    > section {
+      > ul {
+        > li {
+          ul li {
             > a {
-              padding: 0.3rem 0.7rem;
-              font-size: 0.875rem;
-            }
-            &.github {
-              > a {
-                font-size: 1.8rem;
-              }
-            }
-            &.lang {
-              > a {
-                border: 1px solid $assist-color;
-                border-radius: 0.25rem;
-              }
+              color: $secondary-text-color;
             }
           }
         }
@@ -76,14 +127,24 @@ ns-layout {
     }
   }
 
+  > ns-content {
+    padding-top: $header-height;
+    padding-left: 0;
+    height: 100%;
+    display: block;
+    transition: padding $transition-duration;
+  }
+
   > ns-footer {
     width: 100%;
-    display: inline-block;
+    display: block;
     margin-top: 1.5rem;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0) 100%);
-    .main {
-      @include flex-center();
+    > section {
+      display: flex;
+      align-items: center;
       justify-content: center;
+      width: 100vw;
       > p {
         text-align: center;
         font-size: 0.625rem;
@@ -91,6 +152,36 @@ ns-layout {
         margin: 2rem 0;
         color: #777;
       }
+    }
+  }
+
+  &.shrink {
+    > ns-sider {
+      width: $sider-width;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      overflow-y: auto;
+      li {
+        a {
+          padding: 0 0.75rem;
+          span,
+          i {
+            visibility: inherit;
+            opacity: 1;
+          }
+        }
+        ul {
+          visibility: inherit;
+          height: inherit;
+          opacity: 1;
+        }
+      }
+    }
+    > ns-content {
+      padding-left: $sider-width;
+    }
+    > ns-footer {
+      display: none;
     }
   }
 }

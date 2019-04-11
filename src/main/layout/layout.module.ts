@@ -6,10 +6,14 @@ import { LayoutRoutesModule } from './layout-routes.module';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
+import { SiderComponent } from './sider/sider.component';
+import { SiderNodeComponent } from './sider/sider-node/sider-node.component';
 
 const components = [
   LayoutComponent,
   HeaderComponent,
+  SiderComponent,
+  SiderNodeComponent,
   ContentComponent,
   FooterComponent
 ]

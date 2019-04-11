@@ -1,17 +1,20 @@
-import { NgModule }             from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { DocsComponent } from './docs.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { DocsComponent } from "./docs.component";
 
 const routes: Routes = [
-  { path: '',  component:  DocsComponent}
+  {
+    path: "",
+    component: DocsComponent,
+    children: [
+      { path: "", redirectTo: 'index', pathMatch: "full" },
+      { path: "index", loadChildren: "./index/index.module#IndexModule" }
+    ]
+  }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class DocsRoutesModule { }
+export class DocsRoutesModule {}

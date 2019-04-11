@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core';
 import { MediaMatcher, Breakpoints } from '@angular/cdk/layout';
+import { LayoutService } from './layout.service';
 
 @Component({
   selector: 'ns-layout',
@@ -9,7 +10,12 @@ import { MediaMatcher, Breakpoints } from '@angular/cdk/layout';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor(private mediaMatcher: MediaMatcher) { }
+  @HostBinding('class.shrink') get shrink() { return this.layoutService.shrink; }
+
+  constructor(
+    private mediaMatcher: MediaMatcher,
+    private layoutService: LayoutService
+    ) { }
 
   toXSmall: MediaQueryList;
 
