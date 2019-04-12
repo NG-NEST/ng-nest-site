@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="introduction" datatype="html">
         <source>Solution of combination Angular and Nest</source>
-        <target>结合Angular和Nest的解决方案</target>
+        <target>结合Angular和Nest的开源解决方案</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/home/home.component.html</context>
           <context context-type="linenumber">4</context>

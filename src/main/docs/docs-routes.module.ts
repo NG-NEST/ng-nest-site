@@ -7,8 +7,9 @@ const routes: Routes = [
     path: "",
     component: DocsComponent,
     children: [
-      { path: "", redirectTo: 'index', pathMatch: "full" },
-      { path: "index", loadChildren: "./index/index.module#IndexModule" }
+      { path: "", redirectTo: "index", pathMatch: "full" },
+      { path: "index", loadChildren: "./index/index.module#IndexModule" },
+      { path: "ui", loadChildren: "./ui/ui.module#UiModule" }
     ]
   }
 ];

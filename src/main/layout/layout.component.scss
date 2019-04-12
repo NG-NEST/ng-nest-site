@@ -1,13 +1,11 @@
 @import "index";
 
-// 悬停效果
 @mixin hover {
   background-color: rgba($primary-text-color, 0.1);
   border-radius: 0.25rem;
   color: $primary-color;
 }
 
-// 选中效果
 @mixin activated {
   color: $primary-color;
 }
@@ -63,7 +61,7 @@ ns-layout {
     left: 0;
     z-index: 9;
     box-shadow: $box-shadow;
-    transition: width $transition-duration, padding $transition-duration;
+    transition: width $transition-duration-slow, padding $transition-duration-slow;
     padding-top: 1rem;
     padding-bottom: 1rem;
     li {
@@ -90,6 +88,7 @@ ns-layout {
           font-size: 1rem;
           visibility: hidden;
           transition: visibility $transition-duration, opacity $transition-duration;
+          opacity: 0;
           &.menu {
             font-size: 1.25rem;
           }
@@ -132,7 +131,9 @@ ns-layout {
     padding-left: 0;
     height: 100%;
     display: block;
-    transition: padding $transition-duration;
+    transition: padding $transition-duration-slow;
+    section {
+    }
   }
 
   > ns-footer {
