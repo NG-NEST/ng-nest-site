@@ -20,7 +20,7 @@
       </trans-unit>
       <trans-unit id="home" datatype="html">
         <source>Home</source>
-        <target>首 页</target>
+        <target>首页</target>
         <context-group purpose="location">
           <context context-type="sourcefile">share/developing/developing.component.html</context>
           <context context-type="linenumber">5</context>
@@ -144,14 +144,14 @@
       </trans-unit>
       <trans-unit id="we.one" datatype="html">
         <source>Common UI library</source>
-        <target>通用UI库</target>
+        <target>UI 库</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/home/home.component.html</context>
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="we.two" datatype="html">
-        <source>User core business library</source>
+        <source>User module</source>
         <target>用户核心业务库</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/home/home.component.html</context>
@@ -167,7 +167,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="we.four" datatype="html">
-        <source>Workflow engine</source>
+        <source>Workflow design</source>
         <target>工作流引擎</target>
         <context-group purpose="location">
           <context context-type="sourcefile">main/home/home.component.html</context>

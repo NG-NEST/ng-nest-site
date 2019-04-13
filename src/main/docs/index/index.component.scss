@@ -4,7 +4,7 @@ ns-index {
   > section {
     > .row {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       padding: 2rem 0;
       border-bottom: 1px solid $divider-color;
       > .content {

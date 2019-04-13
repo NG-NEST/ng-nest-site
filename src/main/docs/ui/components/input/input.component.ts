@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  selector: "ns-introduction",
-  templateUrl: "./introduction.component.html",
+  selector: "ns-input",
+  templateUrl: "./input.component.html",
   encapsulation: ViewEncapsulation.None
 })
-export class IntroductionComponent {}
+export class InputComponent {}

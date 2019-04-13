@@ -8,15 +8,27 @@ export class LayoutService {
   shrink = false;
 
   menus: Menu[] = [
-    { id: "1", parentId: null, label: "UI库", router: "", icon: "icon-ui" },
-    { id: "1-1", parentId: "1", label: "简介", router: "/index/docs/ui" },
-    { id: "1-2", parentId: "1", label: "基本组件", router: "" },
+    { id: "1", parentId: null, label: "UI库", icon: "icon-ui" },
+    {
+      id: "1-1",
+      parentId: "1",
+      label: "简介",
+      router: "./docs/ui/introduction"
+    },
+    { id: "1-10", parentId: "1", label: "教程" },
+    {
+      id: "1-10-1",
+      parentId: "1-10",
+      label: "指南",
+      router: "./docs/ui/course/guide"
+    },
+    { id: "1-2", parentId: "1", label: "基本组件" },
     {
       id: "1-2-1",
       parentId: "1-2",
       label: "输入框",
       enLabel: "Input",
-      router: ""
+      router: "./docs/ui/components/input"
     },
     {
       id: "1-2-2",

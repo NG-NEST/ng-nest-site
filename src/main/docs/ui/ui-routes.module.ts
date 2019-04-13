@@ -9,6 +9,8 @@ const routes: Routes = [
     children: [
       { path: "", redirectTo: "introduction", pathMatch: "full" },
       { path: "introduction", loadChildren: "./introduction/introduction.module#IntroductionModule" },
+      { path: "course", loadChildren: "./course/course.module#CourseModule" },
+      { path: "components", loadChildren: "./components/components.module#ComponentsModule" },
     ]
   }
 ];

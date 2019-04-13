@@ -73,7 +73,7 @@ ns-layout {
         height: 2.25rem;
         font-size: 0.875rem;
         color: $primary-text-color;
-        span {
+        p {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -83,6 +83,9 @@ ns-layout {
           visibility: hidden;
           opacity: 0;
           cursor: pointer;
+          > span {
+            margin-left: 0.25rem;
+          }
         }
         i {
           font-size: 1rem;
@@ -145,7 +148,6 @@ ns-layout {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100vw;
       > p {
         text-align: center;
         font-size: 0.625rem;
@@ -165,7 +167,7 @@ ns-layout {
       li {
         a {
           padding: 0 0.75rem;
-          span,
+          p,
           i {
             visibility: inherit;
             opacity: 1;

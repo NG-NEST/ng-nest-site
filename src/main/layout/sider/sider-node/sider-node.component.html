@@ -34,7 +34,9 @@
 
 <ng-template #itemTemp let-opt="option">
   <i class="icon {{ opt.icon }} menu"></i>
-  <span>{{ opt.label }}</span>
+  <p>
+    {{ opt.label }} <span *ngIf="opt.enLabel">{{ opt.enLabel }}</span>
+  </p>
   <i
     [ngStyle]="{ display: !(child.length > 0 ? true : false) ? 'none' : '' }"
     class="icon icon-{{
